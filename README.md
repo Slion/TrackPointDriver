@@ -43,6 +43,14 @@ It works both vertically and horizontally.
 While designed to work for [Lenovo ThinkPad USB Keyboard with TrackPoint]
 this driver could potentially work for other TrackPoint hardware or even any mouse pointer device.
 
+# Development
+Use DebugView and enable verbose kernel capture to obtain debug output from a driver debug build.
+
+# Conclusion
+That was an interresting dip in Windows kernel driver development.
+Actually implementing a proper mouse wheel emulation from a mouse driver filter was really straight forward.
+That brings the question: why could Lenevo engineers not get this done years ago? Go figure! 
+
 # Resources
 * [Linux driver] for the same hardware.
 * Lenovo ThinkPad USB Keyboard with TrackPoint:
