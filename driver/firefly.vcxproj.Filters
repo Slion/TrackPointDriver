@@ -19,27 +19,18 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <MofComp Include="firefly.mof">
-      <Filter>Driver Files</Filter>
-    </MofComp>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="device.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="driver.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="vfeature.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="wmi.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="firefly.rc">
-      <Filter>Resource Files</Filter>
-    </ResourceCompile>
+    <ClInclude Include="*.h;*.hpp;*.hxx;*.hm;*.inl;*.xsd">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Inf Include="*.inx">
+      <Filter>Driver Files</Filter>
+    </Inf>
   </ItemGroup>
 </Project>
