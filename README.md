@@ -8,7 +8,7 @@ and they are still going strong.
 The newest [ThinkPad TrackPoint Keyboard II], while pleasant to type on,
 has a rather unimpressive layout by comparison. I ruled out upgrading for the time being.
 One unique feature I use most on the TrackPoint is scrolling while holding down the middle button.
-However Lenovo [official driver] TrackPoint scrolling implementation is rather unreliable.
+However with Lenovo [official driver], TrackPoint scrolling is rather unreliable.
 On some application it just won't work.
 On others like Visual Studio it will work for a while until it won't.
 This driver primary goal is therefore to get the scrolling working everywhere, reliably,
