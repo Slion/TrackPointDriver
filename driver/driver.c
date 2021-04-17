@@ -518,20 +518,25 @@ Return Value:
 
 
         // If middle button is down start scrolling then
-        if (middleButtonDown) {
+        if (middleButtonDown)
+        {
             DebugPrint(("KTT:Scrolling: %d , %d\n", InputData->LastX, InputData->LastY));
             
             // Can't do both horizontal and vertical scroll without injecting data and I'm not sure how to do that
             // For the time being we just do one or the other but not both at the same time and that's just ok anyway.
-            if (abs(InputData->LastY) >= abs(InputData->LastX)) {
+            if (abs(InputData->LastY) >= abs(InputData->LastX))
+            {
                 // Scrolling vertically
                 InputData->ButtonFlags |= MOUSE_WHEEL;
-                InputData->ButtonData = (USHORT)-InputData->LastY;
+                // Square of our offset actually provides a good acceleration effect
+                InputData->ButtonData = (USHORT)-(InputData->LastY*abs(InputData->LastY));
             }
-            else {
+            else
+            {
                 // Scrolling horizontally
                 InputData->ButtonFlags |= MOUSE_HWHEEL;
-                InputData->ButtonData = (USHORT)InputData->LastX;
+                // Square of our offset actually provides a good acceleration effect
+                InputData->ButtonData = (USHORT)(InputData->LastX * abs(InputData->LastX));
             }
                                          
             // Cancel all actual mouse move
