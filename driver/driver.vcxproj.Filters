@@ -29,7 +29,7 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Inf Include="*.inx">
+    <Inf Include="TrackPoint.inx">
       <Filter>Driver Files</Filter>
     </Inf>
   </ItemGroup>
