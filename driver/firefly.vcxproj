@@ -75,15 +75,6 @@
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
   </ImportGroup>
-  <ItemGroup Label="WrappedTaskItems">
-    <MofComp Include="firefly.mof">
-      <CreateBinaryMofFile>".\$(IntDir)\firefly.bmf"</CreateBinaryMofFile>
-    </MofComp>
-    <Wmimofck Include=".\$(IntDir)\firefly.bmf" />
-    <Wmimofck Include=".\$(IntDir)\firefly.bmf">
-      <HeaderOutputFile>.\$(IntDir)\fireflymof.h</HeaderOutputFile>
-    </Wmimofck>
-  </ItemGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <TargetName>firefly</TargetName>
   </PropertyGroup>
