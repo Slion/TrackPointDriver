@@ -1,35 +1,47 @@
 # TrackPointDriver
-This is an alternative ThinkPad TrackPoint driver for Windows offering a reliable TrackPoint scrolling experience.
+This is an alternative ThinkPad TrackPoint driver for Windows
+offering a reliable TrackPoint scrolling experience.
 
 # Story
-I've been using a couple of [Lenovo ThinkPad USB Keyboard with TrackPoint] for over a decade and they are still going strong.
-The newest [ThinkPad TrackPoint Keyboard II], while pleasant to type on, has a rather unimpressive layout by comparison. I ruled out upgrading for the time being.
-The one feature I use most on the TrackPoint is scrolling while holding down the middle button.
+I've been using a couple of [Lenovo ThinkPad USB Keyboard with TrackPoint] for over a decade
+and they are still going strong.
+The newest [ThinkPad TrackPoint Keyboard II], while pleasant to type on,
+has a rather unimpressive layout by comparison. I ruled out upgrading for the time being.
+One unique feature I use most on the TrackPoint is scrolling while holding down the middle button.
 However Lenovo [official driver] TrackPoint scrolling implementation is rather unreliable.
-On some application it just won't work on others like Visual Studio it will work for a while until it won't.
-This driver primary goal is therefore to get the scrolling working everywhere and reliably exactly like your standard mouse wheel. 
+On some application it just won't work.
+On others like Visual Studio it will work for a while until it won't.
+This driver primary goal is therefore to get the scrolling working everywhere, reliably,
+exactly like your standard mouse wheel. 
 
 # Feature
 TrackPoint scrolling: hold down middle button to scroll vertically or horizontally using your TrackPoint.
 
+# Download
+Coming soon on slions.net.
+
 # Installation
 * First install the [official driver] from Lenovo.
+You will still need it to be able to adjust sensitivy and other parameters from Windows Mouse Properties settings.
 * TODO: Make sure test signing is enabled on your computer.
 * Go to Windows Device Manager.
 * Locate your TrackPoint device below "Mice and other pointing devices".
 * Right click your TrackPoint device and select "Update driver".
 * Click "Browse my computer for drivers".
 * Click "Let me pick a list off available drivers on my computer".
-* Click "Have Disk…" button.
+* Click "Have Diskâ€¦" button.
 * "Browse" to this driver location on your computer and select the INF file.
 * Select the driver and click "Next".
 * Validate various Windows warning messages if needed until installation succeeds.
 
 # Usage
 You can still adjust TrackPoint stick sensitivity as usual from Windows Mouse Properties.
+Hold down the middle button and use your TrackPoint for mouse wheel emulation.
+It works both vertically and horizontally.
 
 # Hardware
-While designed to work for [Lenovo ThinkPad USB Keyboard with TrackPoint] this driver could potentially work for other TrackPoint hardware or even any mouse pointer device.
+While designed to work for [Lenovo ThinkPad USB Keyboard with TrackPoint]
+this driver could potentially work for other TrackPoint hardware or even any mouse pointer device.
 
 # Resources
 * [Linux driver] for the same hardware.
