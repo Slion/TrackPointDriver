@@ -18,7 +18,7 @@ exactly like your standard mouse wheel.
 TrackPoint scrolling: hold down middle button to scroll vertically or horizontally using your TrackPoint.
 
 # Download
-Coming soon on slions.net.
+Available from [slions.net].
 
 # Installation
 * First install the [official driver] from Lenovo.
@@ -90,3 +90,4 @@ That brings the question: why could Lenevo engineers not get this done years ago
 [USBPcap]: https://desowin.org/usbpcap/
 [DebugView]: https://docs.microsoft.com/en-gb/sysinternals/downloads/debugview
 [installation of unsigned drivers]: https://www.maketecheasier.com/install-unsigned-drivers-windows10/
+[slions.net]: https://slions.net/resources/trackpoint-driver.12
