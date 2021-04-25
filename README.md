@@ -62,6 +62,13 @@ Nevertheless it's clearly possible to analyze communications between the [offici
 Note that [USBPcap] is bundled with [WireShark]. Such a reverse engineering was done for that [Linux driver].
 See [sensitivity report](docs/trackpoint-sensitivity-report.md).
 
+# Further development
+- We could add some configuration options through an UWP application or a [property sheet].
+- Communications with the driver could be done through WMI I guess, see [Microsoft Firefly Driver Sample] for details of such an implementation.
+- Driver could be packaged in an installer, I believe there is such a thing as a Visual Studio driver package project.
+- Driver and installer could be signed to allow installation on UEFI Secure Boot machine. Though an EV Code Signing Certificate is needed and those ain’t cheap and are only granted to companies apparently.
+- To avoid needing such expensive EV Code Signing Certificate we should check if we could implement that driver using User Mode Driver Framework as suggested [there](https://github.com/desowin/usbpcap/issues/117).
+
 # Conclusion
 That was an interesting dip in Windows kernel driver development.
 Actually implementing a proper mouse wheel emulation from a mouse driver filter was really straight forward.
@@ -91,3 +98,4 @@ That brings the question: why could Lenevo engineers not get this done years ago
 [DebugView]: https://docs.microsoft.com/en-gb/sysinternals/downloads/debugview
 [installation of unsigned drivers]: https://www.maketecheasier.com/install-unsigned-drivers-windows10/
 [slions.net]: https://slions.net/resources/trackpoint-driver.12
+[property sheet]: https://docs.microsoft.com/en-us/previous-versions/windows/desktop/legacy/hh127447(v=vs.85)
