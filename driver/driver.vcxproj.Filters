@@ -29,8 +29,13 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Inf Include="TrackPoint.inx">
+    <Inf Include="SlionTrackPoint.inf">
       <Filter>Driver Files</Filter>
     </Inf>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="driver.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
   </ItemGroup>
 </Project>
