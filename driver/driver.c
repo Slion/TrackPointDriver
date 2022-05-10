@@ -1,21 +1,3 @@
-/*--         
-Copyright (c) 2008  Microsoft Corporation
-
-Module Name:
-
-    device.c
-
-Abstract:
-
-Environment:
-
-    Kernel mode only- Framework Version 
-
-Notes:
-
-
---*/
-
 #include "moufiltr.h"
 #include <math.h>
 
