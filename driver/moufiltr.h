@@ -67,6 +67,7 @@ DRIVER_INITIALIZE DriverEntry;
 
 EVT_WDF_DRIVER_DEVICE_ADD MouFilter_EvtDeviceAdd;
 EVT_WDF_IO_QUEUE_IO_INTERNAL_DEVICE_CONTROL MouFilter_EvtIoInternalDeviceControl;
+EVT_WDF_OBJECT_CONTEXT_CLEANUP MouFilter_EvtDriverContextCleanup;
  
 
 
