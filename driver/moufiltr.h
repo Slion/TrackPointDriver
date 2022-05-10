@@ -6,7 +6,7 @@
 #include <ntddmou.h>
 #include <ntdd8042.h>
 #include <wdf.h>
-
+#include "Trace.h"
 
 #if DBG
 
