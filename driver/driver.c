@@ -1,5 +1,6 @@
 #include "moufiltr.h"
 #include <math.h>
+#include "driver.tmh"
 
 #ifdef ALLOC_PRAGMA
 #pragma alloc_text (INIT, DriverEntry)
