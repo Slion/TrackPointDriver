@@ -215,7 +215,11 @@ Routine Description:
 
 	if (ret == FALSE) {
 		status = WdfRequestGetStatus(Request);
-		DebugPrint(("WdfRequestSend failed: 0x%x\n", status));
+		TraceError(
+			TRACE_DRIVER,
+			"WdfRequestSend failed with status %!STATUS!",
+			status
+		);
 		WdfRequestComplete(Request, status);
 	}
 
