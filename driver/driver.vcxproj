@@ -181,14 +181,11 @@
     <ClCompile Include="driver.c" />
   </ItemGroup>
   <ItemGroup>
-    <Inf Exclude="@(Inf)" Include="SlionTrackPoint.inf" />
-    <FilesToPackage Include="$(TargetPath)" Condition="'$(ConfigurationType)'=='Driver' or '$(ConfigurationType)'=='DynamicLibrary'" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Trace.h" />
-  </ItemGroup>
-  <ItemGroup>
     <ResourceCompile Include="driver.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="moufiltr.h" />
+    <ClInclude Include="Trace.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
 </Project>
