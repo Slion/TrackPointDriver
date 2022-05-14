@@ -101,6 +101,9 @@
     <Inf>
       <TimeStamp>1.0.0.1</TimeStamp>
     </Inf>
+    <DriverSign>
+      <FileDigestAlgorithm>SHA256</FileDigestAlgorithm>
+    </DriverSign>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Link>
@@ -123,6 +126,9 @@
     <Inf>
       <TimeStamp>1.0.0.1</TimeStamp>
     </Inf>
+    <DriverSign>
+      <FileDigestAlgorithm>SHA256</FileDigestAlgorithm>
+    </DriverSign>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Link>
@@ -145,6 +151,9 @@
     <Inf>
       <TimeStamp>1.0.0.1</TimeStamp>
     </Inf>
+    <DriverSign>
+      <FileDigestAlgorithm>SHA256</FileDigestAlgorithm>
+    </DriverSign>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Link>
@@ -167,6 +176,9 @@
     <Inf>
       <TimeStamp>1.0.0.1</TimeStamp>
     </Inf>
+    <DriverSign>
+      <FileDigestAlgorithm>SHA256</FileDigestAlgorithm>
+    </DriverSign>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="driver.c" />
@@ -178,7 +190,7 @@
     <ClInclude Include="moufiltr.h" />
     <ClInclude Include="Trace.h" />
   </ItemGroup>
-    <ItemGroup>
+  <ItemGroup>
     <Inf Include="SlionTrackPoint.inf" />
   </ItemGroup>
   <ItemGroup>
