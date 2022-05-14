@@ -1,0 +1,28 @@
+version: 1.0.{build}.0
+image: Visual Studio 2019
+platform:
+- x86
+- x64
+configuration:
+- Release
+install:
+- cmd: git submodule -q update --init
+before_build:
+- ps: Invoke-WebRequest "https://github.com/nefarius/vpatch/releases/latest/download/vpatch.exe" -OutFile vpatch.exe
+- cmd: vpatch.exe --stamp-version "%APPVEYOR_BUILD_VERSION%" --target-file ".\driver\driver.vcxproj" --vcxproj.inf-time-stamp
+- cmd: vpatch.exe --stamp-version "%APPVEYOR_BUILD_VERSION%" --target-file ".\driver\driver.rc" --resource.file-version --resource.product-version
+build:
+  project: $(APPVEYOR_BUILD_FOLDER)\$(APPVEYOR_PROJECT_NAME).sln
+after_build:
+- cmd: makecab.exe /f .\TrackPointDriver_%PLATFORM%.ddf
+artifacts:
+- path: 'disk1\*.cab'
+- path: 'bin**\SlionTrackPoint\*.inf'
+- path: 'bin**\SlionTrackPoint\*.cat'
+- path: 'bin**\SlionTrackPoint\*.sys'
+- path: 'bin**\*.pdb'
+deploy:
+- provider: Environment
+  name: BUILDBOT
+  on:
+    appveyor_repo_tag: true

@@ -1,27 +1,3 @@
-/*++
-Copyright (c) 2008  Microsoft Corporation
-
-Module Name:
-
-    moufiltr.h
-
-Abstract:
-
-    This module contains the common private declarations for the mouse
-    packet filter
-
-Environment:
-
-    kernel mode only
-
-Notes:
-
-
-Revision History:
-
-
---*/
-
 #ifndef MOUFILTER_H
 #define MOUFILTER_H
 
@@ -30,7 +6,7 @@ Revision History:
 #include <ntddmou.h>
 #include <ntdd8042.h>
 #include <wdf.h>
-
+#include "Trace.h"
 
 #if DBG
 
@@ -91,6 +67,7 @@ DRIVER_INITIALIZE DriverEntry;
 
 EVT_WDF_DRIVER_DEVICE_ADD MouFilter_EvtDeviceAdd;
 EVT_WDF_IO_QUEUE_IO_INTERNAL_DEVICE_CONTROL MouFilter_EvtIoInternalDeviceControl;
+EVT_WDF_OBJECT_CONTEXT_CLEANUP MouFilter_EvtDriverContextCleanup;
  
 
 
