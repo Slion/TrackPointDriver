@@ -1,0 +1,17 @@
+; SlionTrackPoint cab file for attestation submission
+.OPTION EXPLICIT
+.Set CabinetFileCountThreshold=0
+.Set FolderFileCountThreshold=0
+.Set FolderSizeThreshold=0
+.Set MaxCabinetSize=0
+.Set MaxDiskFileCount=0
+.Set MaxDiskSize=0
+.Set CompressionType=MSZIP
+.Set Cabinet=on
+.Set Compress=on
+; x86
+.Set CabinetNameTemplate=SlionTrackPoint_x86.cab
+.Set DestinationDir=SlionTrackPoint_x86
+bin\x86\SlionTrackPoint.pdb
+bin\x86\SlionTrackPoint\SlionTrackPoint.inf
+bin\x86\SlionTrackPoint\SlionTrackPoint.sys

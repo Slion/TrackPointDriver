@@ -13,6 +13,14 @@ before_build:
 - cmd: vpatch.exe --stamp-version "%APPVEYOR_BUILD_VERSION%" --target-file ".\driver\driver.rc" --resource.file-version --resource.product-version
 build:
   project: $(APPVEYOR_BUILD_FOLDER)\$(APPVEYOR_PROJECT_NAME).sln
+after_build:
+- cmd: makecab.exe /f .\TrackPointDriver_%PLATFORM%.ddf
+artifacts:
+- path: 'disk1\*.cab'
+- path: 'bin**\SlionTrackPoint\*.inf'
+- path: 'bin**\SlionTrackPoint\*.cat'
+- path: 'bin**\SlionTrackPoint\*.sys'
+- path: 'bin**\*.pdb'
 deploy:
 - provider: Environment
   name: BUILDBOT
