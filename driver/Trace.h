@@ -22,7 +22,7 @@ Environment:
 
 #define WPP_CONTROL_GUIDS                                              \
     WPP_DEFINE_CONTROL_GUID(                                           \
-        nssidswapTraceGuid, (e60faf57,d4d2,4de5,99dd,42acc10e1614),    \
+        SlionTrackPointTraceGuid, (e60faf57,d4d2,4de5,99dd,42acc10e1614),    \
                                                                        \
         WPP_DEFINE_BIT(MYDRIVER_ALL_INFO)                              \
         WPP_DEFINE_BIT(TRACE_DRIVER)                                   \
