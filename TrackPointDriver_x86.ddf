@@ -12,6 +12,7 @@
 ; x86
 .Set CabinetNameTemplate=SlionTrackPoint_x86.cab
 .Set DestinationDir=SlionTrackPoint_x86
+LICENSE
 bin\x86\SlionTrackPoint.pdb
 bin\x86\SlionTrackPoint\SlionTrackPoint.inf
 bin\x86\SlionTrackPoint\SlionTrackPoint.sys
