@@ -23,6 +23,7 @@ Available from [slions.net].
 # Installation
 * First install the [official driver] from Lenovo.
 You will still need it to be able to adjust sensitivy and other parameters from Windows Mouse Properties settings.
+* [Nefarius] kindly signed this driver's latest version. You can skip the next step when using a signed driver.
 * Make sure you enable the [installation of unsigned drivers] on you computer. This is best done by running the following command as administrator: `bcdedit /set testsigning on`.
 If this is denied because of UEFI Secure Boot and you can’t deactivate it then you won't be able to install that driver until a signed version is available.
 * Go to Windows Device Manager.
@@ -99,3 +100,4 @@ That brings the question: why could Lenevo engineers not get this done years ago
 [installation of unsigned drivers]: https://www.maketecheasier.com/install-unsigned-drivers-windows10/
 [slions.net]: https://slions.net/resources/trackpoint-driver.12
 [property sheet]: https://docs.microsoft.com/en-us/previous-versions/windows/desktop/legacy/hh127447(v=vs.85)
+[Nefarius]: https://github.com/nefarius
