@@ -55,6 +55,11 @@ You may also need to add some missing components through Visual Studio Installer
 Use [DebugView] and Enable Verbose Kernel Output from the Capture menu to obtain debug output from a driver debug build.
 I have not used actual step-by-step debugging as it requires a more complex setup with an host and a target machine, physical or virtual.
 
+[Nefarius] enabled WPP tracing. You can use [TraceView] to visualize them.
+To enable WPP tracing create the following `DWORD` registry key and set it to 1:
+`HKLM\SYSTEM\CurrentControlSet\Services\SlionTrackPoint\Parameters\VerboseOn`.
+Reboot your computer and open the `PDB` with [TraceView].
+
 # Omissions
 Our target hardware can be configured by sending it HID reports. Settings such as TrackPoint sensitivity can thus be changed and possibly read I guess.
 However we spared ourselves the task of reverse engineering that configuration protocol.
@@ -101,3 +106,4 @@ That brings the question: why could Lenevo engineers not get this done years ago
 [slions.net]: https://slions.net/resources/trackpoint-driver.12
 [property sheet]: https://docs.microsoft.com/en-us/previous-versions/windows/desktop/legacy/hh127447(v=vs.85)
 [Nefarius]: https://github.com/nefarius
+[TraceView]: https://www.mgtek.com/traceview
