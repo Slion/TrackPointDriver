@@ -3,14 +3,15 @@ image: Visual Studio 2019
 platform:
 - x86
 - x64
+- ARM64
 configuration:
 - Release
 install:
 - cmd: git submodule -q update --init
 before_build:
-- ps: Invoke-WebRequest "https://github.com/nefarius/vpatch/releases/latest/download/vpatch.exe" -OutFile vpatch.exe
-- cmd: vpatch.exe --stamp-version "%APPVEYOR_BUILD_VERSION%" --target-file ".\driver\driver.vcxproj" --vcxproj.inf-time-stamp
-- cmd: vpatch.exe --stamp-version "%APPVEYOR_BUILD_VERSION%" --target-file ".\driver\driver.rc" --resource.file-version --resource.product-version
+- cmd: dotnet tool install --global Nefarius.Tools.Vpatch
+- cmd: vpatch --stamp-version "%APPVEYOR_BUILD_VERSION%" --target-file ".\driver\driver.vcxproj" --vcxproj.inf-time-stamp
+- cmd: vpatch --stamp-version "%APPVEYOR_BUILD_VERSION%" --target-file ".\driver\driver.rc" --resource.file-version --resource.product-version
 build:
   project: $(APPVEYOR_BUILD_FOLDER)\$(APPVEYOR_PROJECT_NAME).sln
 after_build:
