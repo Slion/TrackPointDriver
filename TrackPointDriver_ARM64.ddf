@@ -11,7 +11,7 @@
 .Set Compress=on
 ; ARM64
 .Set CabinetNameTemplate=SlionTrackPoint_ARM64.cab
-.Set DestinationDir=SlionTrackPoint_x64
+.Set DestinationDir=SlionTrackPoint_ARM64
 LICENSE
 bin\ARM64\SlionTrackPoint.pdb
 bin\ARM64\SlionTrackPoint\SlionTrackPoint.inf
